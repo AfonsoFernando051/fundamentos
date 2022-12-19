@@ -10,14 +10,30 @@ import ComParametro from './components/basicos/ComParametro'
 import Aleatorio from './components/aleatorio';
 import Card from './components/layout/Card'
 import ParOuImpar from './components/condicional/ParOuImpar'
+import UsuarioInfo from './components/condicional/UsuarioInfo'
+import DiretaPai from './components/comunicacao/DiretaPai'
+import IndiretaPai from "./components/comunicacao/IndiretaPai"
+import Input from './components/formulario/Input'
+
 export default _ => 
       <div className="App">
         <h1>Fundamentos React (Arrow)</h1>
 
         <div className="Cards" >
-
+        <Card titulo="#11 - Componente Controlado (Input)" color="#E45F56">
+          <Input></Input>
+        </Card>
+        <Card titulo="#10 - Comunicação Indireta" color="#8BAD39">
+          <IndiretaPai></IndiretaPai>
+        </Card>
+        <Card titulo="#9 - Comunicação Direta" color="#59323C">
+          <DiretaPai></DiretaPai>
+        </Card>
         <Card titulo="#8 - Renderização Condicional" color="#982395">
          <ParOuImpar numero={21}></ParOuImpar>
+         <UsuarioInfo usuario={{nome :"Fernando"}}></UsuarioInfo>
+         <UsuarioInfo usuario={{email :"afonsofernando051@gmail.com"}}/>
+
         </Card>
         <Card titulo="#7 - Desafio Repetição" color="#FF4C65">
          <Produtos/>
